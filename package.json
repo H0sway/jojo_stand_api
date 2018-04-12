@@ -1,16 +1,22 @@
 {
   "name": "jojo_stand_api",
   "version": "1.0.0",
-  "description": "\"List of all of the Stands in Jojo's Bizarre Adventure\"",
+  "description": "List of all of the Stands in Jojo's Bizarre Adventure",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "build": "webpack --watch"
+  },
+  "engines": {
+    "node": "9.9.0",
+    "npm": "5.8.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/H0sway/jojo_stand_api.git"
   },
-  "author": "\"Joshua K. Russell\"",
+  "author": "Joshua K. Russell",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/H0sway/jojo_stand_api/issues"
