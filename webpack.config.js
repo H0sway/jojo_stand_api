@@ -5,20 +5,13 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'build.js'
+    filename: 'bundle.js'
   },
   modules: {
     rules: [
       {
         use: 'babel-loader',
         test: /\.js$/
-      },
-      {
-        use: ExtractTextWebpackPlugin.extract({
-          use: 'css-loader',
-          fallback: 'style-loader'
-        }),
-        test: /\.(s*)css$/
       },
       {
         use: [{
@@ -29,7 +22,14 @@ const config = {
           }
         }],
         test: /\.(png|jp(e*)g|svg)$/
-      }
+      },
+      {
+        use: ExtractTextWebpackPlugin.extract({
+          use: 'css-loader',
+          fallback: 'style-loader'
+        }),
+        test: /\.(s*)css$/
+      },
     ]
   },
   plugins: [new ExtractTextWebpackPlugin('style.css')]
