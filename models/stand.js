@@ -4,7 +4,11 @@ const db = require('../db/config');
 // Stand model class, sends queries to the database
 class Stand {
   findAll() {
-    return db.query(`SELECT * FROM stands`);
+    return db.query(
+      `
+      SELECT * FROM stands
+      `
+    );
   }
   findById(id) {
     return db.oneOrNone(

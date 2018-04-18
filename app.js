@@ -15,6 +15,9 @@ app.use(express.static('build'));
 // Routes
 
 app.use('/api/stands', require('/routes/stand-routes'));
+// The asterisk allows React routes to be refreshed without erroring out.
+// Basically it says all routes not defined above are React routes and will
+// render the index.html page in the directory.
 app.use('/*', (req,res) => {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
