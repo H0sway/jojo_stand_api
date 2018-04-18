@@ -11,7 +11,7 @@ const config = {
     rules: [
       {
         use: 'babel-loader',
-        test: /\.js$/
+        test: /\.(js|jsx)$/
       },
       {
         use: [{
