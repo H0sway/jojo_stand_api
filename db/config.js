@@ -1,6 +1,9 @@
 const options = {
+  receive: (data, results, e) => {
+    console.log("This is from receive:", e.query);
+  }
   query: (e) => {
-    console.log(e.query);
+    console.log("This is e.query:", e.query);
   }
 };
 
